@@ -58,6 +58,7 @@
     </div>
 </section>
 <script>
+    $(".loader_bg").fadeIn();
     $.get('api/noticias.json',noticias => {
             noticias.forEach(noticias => {
             $('#noticias').append('<div class="col-md-12 margin_top40"><div class="row d_flex"><div class="col-md-5"><div class="news_img text-center">'+
@@ -68,6 +69,6 @@
             '</div></div></div></div>'
             )
             })
-            
+            $(".loader_bg").fadeOut();
     },'JSON')
 </script>
