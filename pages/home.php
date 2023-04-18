@@ -34,46 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">  
-        <?php 
-        include_once '../vendor/autoload.php';
-
-        $client = new \czPechy\instagramProfileCrawler\Client('grancaciqueexpress');
-
-        /** @var \czPechy\instagramProfileCrawler\Profile $profile */
-        $profile = $client->getProfile();
-
-        foreach($profile->getMedia() as $media) {
-            $mediaData = $media->toArray();
-            $link = $mediaData['link'];
-            $textarray = explode(chr(0x0a),$mediaData['text']);
-            $title = $textarray[0];
-            $text = '';
-            for($i = 1;$i < count($textarray);$i++){
-                $text .= $textarray[$i];
-            }
-            $photo = 'data:image/jpg;base64,'.base64_encode(file_get_contents($mediaData['photo']));
-        ?>
-        <div class="col-md-12 margin_top40">
-                        <div class="row d_flex">
-                        <div class="col-md-5">
-                                <div class="news_img text-center">
-                                    <figure><img style="width:400px;height:400px;object-fit: cover;" src="<?php echo $photo; ?>" /></figure>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="news_text">
-                                    <h3><?php echo $title; ?></h3>
-                                        <span><a target="_blank" href="<?php echo $link; ?>">Ver mas</a></span>
-                                    <p><?php echo $text; ?></p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-        <?php
-        }
-        ?>
+        <div class="row" id="noticias">  
         </div>
     </div>
 </div>
@@ -96,3 +57,17 @@
         </div>
     </div>
 </section>
+<script>
+    $.get('api/noticias.json',noticias => {
+            noticias.forEach(noticias => {
+            $('#noticias').append('<div class="col-md-12 margin_top40"><div class="row d_flex"><div class="col-md-5"><div class="news_img text-center">'+
+            '<figure><img style="width:400px;height:400px;object-fit: cover;" src="'+noticias.foto+'" /></figure></div></div><div class="col-md-7"><div class="news_text">'+
+            '<h3>'+noticias.titulo+'</h3>'+
+            '<span><a target="_blank" href="'+noticias.link+'">Ver mas</a></span>'+
+            '<p>'+noticias.texto+'</p>'+
+            '</div></div></div></div>'
+            )
+            })
+            
+    },'JSON')
+</script>
