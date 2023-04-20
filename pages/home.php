@@ -1,7 +1,7 @@
 <section class="">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 mt-4 mb-4">
                 <div class="wrapper">
                     <img class="gallerybanner" src="images/gallery_banner/gc1.jpg" alt="" />
                     <img class="gallerybanner" src="images/gallery_banner/gc2.jpg" alt="" />

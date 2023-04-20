@@ -198,10 +198,11 @@
         padding: 0;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(images/menu_icon.png);
+        background: url(../images/menu_icon.png);
         background-repeat: no-repeat;
         width: 50px;
-        height: 40px;
+        height: 55px;
+        margin: -10px;
     }
 }
 
@@ -270,7 +271,7 @@
     .navigation.navbar {
         display: inherit !important;
         padding: 10px;
-        width: 60%;
+        width: 16%;
         padding-top: 2px !important;
         margin: auto;
     }
@@ -279,7 +280,7 @@
         padding: 20px;
         margin-top: 68px;
         position: absolute;
-        width: 156%;
+        width: 500%;
         z-index: 9999;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     }
@@ -305,7 +306,7 @@
         border: inherit;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(images/menu_icon1.png);
+        background: url(../images/menu_icon1.png);
         background-repeat: no-repeat;
         width: 50px;
         height: 40px;

@@ -4,7 +4,7 @@
                <div class="col-md-12">
                   <div class="titlepage">
                      <h2>TARIFAS</h2>
-</div>
+                    </div>
                   <div class="card border col-md-12 text-center">
                      <p><strong>Fecha:</strong> <?php echo date('d/m/Y'); ?> </p>
                   </div>
