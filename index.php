@@ -58,14 +58,10 @@ header("Pragma: no-cache");
                      </div>
                      <div class="col-md-4">
                         <ul class="social_icon">
-                           <li> <a href="https://www.facebook.com/FerryGranCaciqueExpress"><i class="fa fa-facebook" aria-hidden="true"></i>
-                              </a>
-                           </li>
-                           <li> <a href="https://twitter.com/FerryGCexpress"><i class="fa fa-twitter"></i></a></li>
-                           <!-- <li> <a href="https://www.tiktok.com/@grancaciqueexpress"> <i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li> -->
-                           <li> <a href="https://www.instagram.com/ferrygrancacique/"><i class="fa fa-instagram" aria-hidden="true"></i>
-                              </a>
-                           </li>
+                           <li><a href="https://www.facebook.com/FerryGranCaciqueExpress"><i class="fa-brands fa-facebook-f"></i></a></li>
+                           <li><a href="https://twitter.com/FerryGCexpress"><i class="fa-brands fa-twitter"></i></a></li>
+                           <li><a href="https://www.tiktok.com/@grancaciqueexpress"><i class="fa-brands fa-tiktok"></i></a></li>
+                           <li> <a href="https://www.instagram.com/ferrygrancacique/"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                      </div>
                      <div class="col-md-4">
