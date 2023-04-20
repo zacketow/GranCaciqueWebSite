@@ -230,7 +230,7 @@ $max = $y."-".$m."-".cal_days_in_month(CAL_GREGORIAN,$m,$y);
                 },
                 computed: {
                     urlImg() {
-                        return '/consultar/fecha/' + this.code.toLowerCase() + '.png';
+                        return 'images/' + this.code.toLowerCase() + '.png';
                     }
                 }
             })
