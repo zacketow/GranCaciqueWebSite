@@ -96,12 +96,12 @@ let itemMenu = (li) => {
     $(".nav-item").removeClass("active");
     $(li).parent("li").addClass("active");
     $(".loader_bg").show();
-    $.get(docmenu, (menu) => {
-        $("#content").html(menu);
-        if($(li).attr('datamenu') === 'home'){getNoticias();}else{$(".loader_bg").fadeOut();}
-        
-    });
+    loadMenu (docmenu);
+    if($(li).attr('datamenu')==='home'){getNoticias();}
 };
+function loadMenu (docmenu) {
+    $.get(docmenu,(menu)=>{$("#content").html(menu);$(".loader_bg").fadeOut();});
+}
 function getNoticias(){
     $.get('api/noticias.json',noticias => {
         noticias.forEach(noticias => {

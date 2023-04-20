@@ -140,7 +140,7 @@ $max = $y."-".$m."-".cal_days_in_month(CAL_GREGORIAN,$m,$y);
                             </li>
                         </ul>
                         <div class="row align-items-end mb-3 flex-column-reverse flex-md-row">
-                            <button class="btn btn-success" onClick="itemMenu($('.nav-link[datamenu=calendario]')[0])">Regresar</button>
+                            <button class="btn btn-success" onClick="loadMenu('pages/calendario.php')">Regresar</button>
                         </div>
                     </template>
                 </div>
@@ -177,7 +177,6 @@ $max = $y."-".$m."-".cal_days_in_month(CAL_GREGORIAN,$m,$y);
                         this.code = code;
                         this.viajes = (await this.obtenerViajes()).data;
                         this.isLoading = false;
-                        console.log(this.viajes);
                     } catch (err) {
                         this.error = true;
                     }
