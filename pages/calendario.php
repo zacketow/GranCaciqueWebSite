@@ -140,7 +140,7 @@ $max = $y."-".$m."-".cal_days_in_month(CAL_GREGORIAN,$m,$y);
                             </li>
                         </ul>
                         <div class="row align-items-end mb-3 flex-column-reverse flex-md-row">
-                            <button class="btn btn-success" onClick="loadMenu('pages/calendario.php')">Regresar</button>
+                            <button class="btn btn-success" onClick="$('.loader_bg').fadeIn();loadMenu('pages/calendario.php')">Regresar</button>
                         </div>
                     </template>
                 </div>
