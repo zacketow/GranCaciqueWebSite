@@ -20,5 +20,17 @@ $max = $y."-".$m."-".cal_days_in_month(CAL_GREGORIAN,$m,$y);
             <label>Numero de boleto:</label>
             <input type="text" class="form-control" id="numeroBoleto" placeholder="0000001">
         </div>
-        <button type="submit" id="consultarFecha" class="btn mt-4 fsf" style="background-color: #2596be;color: white;">Consultar</button>
+        <button type="submit" id="consultarBoleto" class="btn mt-4 fsf" style="background-color: #2596be;color: white;">Consultar</button>
 </div>
+<script>
+    $('#consultarBoleto').click( async ()=>{
+        async function obtenerBoleto(boleto,code) {
+            return axios.post('https://consultas.grancaciqueexpress.com/consultar/boleto/', {
+            numero_boleto:boleto,
+            code: code  });
+        }
+        var boletoData = (await obtenerBoleto($('#numeroBoleto').val(),'GC')).data;
+        console.log(boletoData);
+    });
+    
+</script>
