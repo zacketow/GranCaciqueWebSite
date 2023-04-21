@@ -1,7 +1,5 @@
 <?php
-header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
-header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?>
@@ -11,6 +9,10 @@ header("Pragma: no-cache");
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="Expires" content="0">
+       <meta http-equiv="Last-Modified" content="0">
+      <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+      <meta http-equiv="Pragma" content="no-cache">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
