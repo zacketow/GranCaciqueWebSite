@@ -201,5 +201,6 @@ header("Pragma: no-cache");
       <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script src="js/str_replace.js"></script>
 </html>
 
