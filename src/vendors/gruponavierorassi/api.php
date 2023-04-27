@@ -9,7 +9,7 @@ if($method == "OPTIONS") {
 }
 
 if($_GET and isset($_GET['tarifas'])){
-    $tarifas = "tarifas.json";
+    $tarifas = "../../api/tarifas.json";
     unlink($tarifas);
     $file = fopen($tarifas, "w") or die("Unable to open file!");
     $txt = $_POST['data'];
@@ -17,7 +17,7 @@ if($_GET and isset($_GET['tarifas'])){
     fclose($file);
 }
 if($_GET and isset($_GET['noticias'])){
-    $noticias = "noticias.json";
+    $noticias = "../../api/noticias.json";
     unlink($noticias);
     $file = fopen($noticias, "w") or die("Unable to open file!");
     $txt = $_POST['data'];
